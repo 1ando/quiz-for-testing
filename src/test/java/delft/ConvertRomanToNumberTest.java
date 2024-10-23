@@ -31,7 +31,7 @@ class ConvertRomanToNumberTest {
     Arguments tc9 = Arguments.of("100", "C", 100);
     Arguments tc10 = Arguments.of("10", "D", 500);
 
-    return Stream.of(tc1,tc2,tc3,tc4,tc5,tc5, tc6, tc7,tc8, tc9, tc10, tc11);
+    return Stream.of(tc1,tc2,tc3,tc4,tc5,tc5, tc6, tc7,tc8, tc9, tc10);
     }
 
     @ParameterizedTest(name = "add")
@@ -42,10 +42,10 @@ class ConvertRomanToNumberTest {
     }
 
     public static Stream<Arguments> generatorAdd() {
-        Arguments tc1 = Arguments.of("nothing", " "," ", 0);
-        Arguments tc2 = Arguments.of("only one val", "V"," ", 5);
-        Arguments tc3 = Arguments.of("adding two", "V","II", 7);
-       // Arguments tc4 = Arguments.of("nothing", "ii","III", 5); this fails
+        Arguments tc1 = Arguments.of("nothing", " "," ", 0); //edge case
+        Arguments tc2 = Arguments.of("only one val", "V"," ", 5);//make sure it stays same
+        Arguments tc3 = Arguments.of("adding two", "V","II", 7);//simple adding
+       // Arguments tc4 = Arguments.of("nothing", "II","III", 5); this fails
        // Arguments tc4 = Arguments.of("adding second", " ","V", 10);
 
         return Stream.of(tc1, tc2, tc3);
