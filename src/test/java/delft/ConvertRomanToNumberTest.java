@@ -25,7 +25,7 @@ class ConvertRomanToNumberTest {
     Arguments tc3 = Arguments.of("four", "IV", 4); //smaller numeral in front
     Arguments tc4 = Arguments.of("six", "VI", 6); //bigger numeral in front
     Arguments tc5 = Arguments.of("a lot of ones", "IIIIIIIIIII", 11);
-    Arguments tc6 = Arguments.of("a lot of ones with white space", "I I I I I I I I I I I", 11);//see if whitespace affects it
+    Arguments tc6 = Arguments.of("a lot of ones with white space", " I I I I I I I I I I I", 11);//see if whitespace affects it
     Arguments tc7 = Arguments.of("1k", "M", 1000);//I wanted to check ever roman character ot hit those lines of code
     Arguments tc8 = Arguments.of("50", "L", 50);
     Arguments tc9 = Arguments.of("100", "C", 100);
