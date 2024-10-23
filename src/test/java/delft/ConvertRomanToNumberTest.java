@@ -25,13 +25,14 @@ class ConvertRomanToNumberTest {
     Arguments tc3 = Arguments.of("four", "IV", 4); //smaller numeral in front
     Arguments tc4 = Arguments.of("six", "VI", 6); //bigger numeral in front
     Arguments tc5 = Arguments.of("a lot of ones", "IIIIIIIIIII", 11);
-    Arguments tc6 = Arguments.of("a lot of ones with white space", "I I I I I I I I I I I", 11);
-    Arguments tc7 = Arguments.of("1k", "M", 1000);
+    Arguments tc6 = Arguments.of("a lot of ones with white space", " I I I I I I I I I I I", 11);//see if whitespace affects it
+    Arguments tc7 = Arguments.of("1k", "M", 1000);//I wanted to check ever roman character ot hit those lines of code
     Arguments tc8 = Arguments.of("50", "L", 50);
     Arguments tc9 = Arguments.of("100", "C", 100);
     Arguments tc10 = Arguments.of("10", "D", 500);
+    Arguments tc11 = Arguments.of("Not a numeral", "P", 0);//see if a non-numeral gives a value
 
-    return Stream.of(tc1,tc2,tc3,tc4,tc5,tc5, tc6, tc7,tc8, tc9, tc10);
+    return Stream.of(tc1,tc2,tc3,tc4,tc5,tc5, tc6, tc7,tc8, tc9, tc10, tc11);
     }
 
     @ParameterizedTest(name = "add")
@@ -46,7 +47,8 @@ class ConvertRomanToNumberTest {
         Arguments tc2 = Arguments.of("only one val", "V"," ", 5);
         Arguments tc3 = Arguments.of("adding two", "V","II", 7);
        // Arguments tc4 = Arguments.of("nothing", "ii","III", 5); this fails
+        Arguments tc4 = Arguments.of("adding second", " ","V", 10);
 
-        return Stream.of(tc1, tc2, tc3);
+        return Stream.of(tc1, tc2, tc3,tc4);
     }
 }
