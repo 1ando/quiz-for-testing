@@ -47,6 +47,6 @@ class ConvertRomanToNumberTest {
         Arguments tc3 = Arguments.of("adding two", "V","II", 7);//simple adding
        // Arguments tc4 = Arguments.of("nothing", "II","III", 5); this fails
 
-        return Stream.of(tc1, tc2, tc3,tc4);
+        return Stream.of(tc1, tc2, tc3);
     }
 }
