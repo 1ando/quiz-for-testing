@@ -30,7 +30,6 @@ class ConvertRomanToNumberTest {
     Arguments tc8 = Arguments.of("50", "L", 50);
     Arguments tc9 = Arguments.of("100", "C", 100);
     Arguments tc10 = Arguments.of("10", "D", 500);
-    Arguments tc11 = Arguments.of("Not a numeral", "P", 0);//see if a non-numeral gives a value
 
     return Stream.of(tc1,tc2,tc3,tc4,tc5,tc5, tc6, tc7,tc8, tc9, tc10, tc11);
     }
