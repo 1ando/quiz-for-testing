@@ -104,7 +104,7 @@ public class ConvertRomanToNumber {
 
 	/*
 	 * Method that accepts two strings representing roman
-	 * numerals and returns the decimal sum. 
+	 * numerals and returns the decimal sum.
 	 */
 	public static int add(String romanNum1, String romanNum2) {
 		adding = true;
